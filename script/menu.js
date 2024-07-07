@@ -1,0 +1,68 @@
+//Es un arreglo de objetos tiene info de menu y sus items
+const menuData = [
+    {
+        title: "De Lunes a Jueves",
+        image: "img/arepa_icono.png",
+        items: [
+            {sabor: "Cafe", precio: "$ 1.000 pesos" },
+            {sabor: "Cafe en leche", precio: "$ 2.000 pesos" },
+            {sabor: "Arepa sin asar", precio: "$ 1.000 pesos" },
+            { sabor: "Arepa solas", precio: "$1.500 pesos" },
+            { sabor: "Arepa con Queso Lonchis", precio: "$3.000 pesos" },
+            { sabor: "Arepa con Queso Cuajada", precio: "$3.000 pesos" },
+            { sabor: "Arepa con jamon y queso", precio: "$3.500 pesos" },
+            { sabor: "Arepa con chorizo", precio: "$6.000 pesos" },
+            { sabor: "Chorizo solo", precio: "$5.500 pesos" }
+        ]
+    },
+    {
+        title: "Viernes, Domingos y Festivos",
+        image: "img/arepa_icono.png",
+        items: [
+            {sabor: "Cafe", precio: "$ 1.000 pesos" },
+            {sabor: "Cafe en leche", precio: "$ 2.000 pesos" },
+            { sabor: "Arepa sin asar", precio: "$1.000 pesos" },
+            { sabor: "Arepa solas", precio: "$1.500 pesos" },
+            { sabor: "Arepa con Queso Lonchis", precio: "$3.000 pesos" },
+            { sabor: "Arepa con Queso Cuajada", precio: "$3.000 pesos" },
+            { sabor: "Arepa con jamon y queso", precio: "$3.500 pesos" },
+            { sabor: "Arepa con pericos", precio: "$4.500 pesos" },
+            { sabor: "Arepa con chorizo", precio: "$6.000 pesos" },
+            { sabor: "Chorizo solo", precio: "$5.500 pesos" },
+            { sabor: "Arepa con pollo desmechado", precio: "$7.000 pesos" },
+            { sabor: "Arepa con carne desmechada", precio: "$7.000 pesos" },
+            { sabor: "Arepa con todo", precio: "$10.000 pesos" },
+            { sabor: "Arepa mixta pollo y carne", precio: "$8.000 pesos" }
+        ]
+    }
+];
+
+//Obtiene el contenedor del menu El DOM
+const menuContainer = document.getElementById("menu-content");
+menuData.forEach(section =>{
+    const sectionElement = document.createElement("section");
+
+    const titleElement = document.createElement("h2");
+    titleElement.textContent = section.title;
+    sectionElement.appendChild(titleElement);
+
+    
+
+    section.items.forEach(item => {
+        const articleElement =document.createElement('article');
+        articleElement.className = 'item';
+
+        const saborElement =document.createElement('p');
+        saborElement.className = 'sabor';
+        saborElement.textContent = item.sabor;
+        articleElement.appendChild(saborElement);
+
+        const precioElement = document.createElement('p');
+        precioElement.className = 'precio';
+        precioElement.textContent = item.precio;
+        articleElement.appendChild(precioElement);
+
+        sectionElement.appendChild(articleElement);
+    });
+    menuContainer.appendChild(sectionElement);
+});

@@ -1,22 +1,30 @@
 body{
-  background-image: url("img/bk_so_good.jpeg");
+  background-image: url('/img/bk_so_good.jpeg');
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background-size: center;
+  background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh;
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0;
   color: #3E3E3E;
 }
 
 h1{
-  font: size 40px;
-  margin-top: 0;
-  margin-bottom: 15px;
+  font-size:  30px;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #3E3E3E;
+}
+.domi{
+  font-size: 15px;
 }
 
 h2{
   font-size: 30px;
+  margin-top: 10px;
 }
 
 .established{
@@ -28,14 +36,15 @@ h1, h2, p{
 }
 
 .menu{
-  background-color: rgba(255, 255, 255, 0.963);
-  width: 90%;
+  background-color: rgba(255, 255, 255, 0.935);
+  width: 40%;
   background-position: center;
   margin-left: auto;
   margin-right: auto;
-  padding: 30px;
+  padding: 20px;
   max-width: 500px;
   max-height: 100%;
+  border-radius: 20px;
 }
 
 img{
@@ -50,7 +59,7 @@ hr{
 }
 
 .bottom-line{
-  margin-top: 25px;
+  margin-top: 30px;
 }
 
 h1, h2{
@@ -72,11 +81,11 @@ h1, h2{
 /*FOOTER*/
 
 footer{
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .direccion-horario{
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 }
 
 a{
@@ -93,3 +102,40 @@ a:active{
   color: orangered;
 }
 
+/*Media Queries*/
+@media (max-width: 768px){
+  .menu{
+    width: 95%;
+    padding: 15px;
+  }
+  h1{
+    font-size: 30px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+
+  .item p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu {
+    width: 100%;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .item p {
+    font-size: 14px;
+  }
+
+}
