@@ -45,6 +45,7 @@ h1, h2, p{
   max-width: 500px;
   max-height: 100%;
   border-radius: 20px;
+  overflow-y: auto;
 }
 
 img{
@@ -105,7 +106,7 @@ a:active{
 /*Media Queries*/
 @media (max-width: 768px){
   .menu{
-    width: 95%;
+    width: 90%;
     padding: 15px;
   }
   h1{
@@ -121,6 +122,10 @@ a:active{
 }
 
 @media (max-width: 480px) {
+  body {
+    padding:10px;
+  }
+
   .menu {
     width: 100%;
     padding: 10px;
