@@ -33,65 +33,56 @@ const menuData = [
   }
 ];
 
-//Obtiene el contenedor del menu El DOM
-const createMenuSection =(section) =>{
+const createMenuSection = (section) => {
   const sectionElement = document.createElement("section");
-  sectionElement.className= 'menu-section'
+  sectionElement.className = 'menu-section';
 
   const titleElement = document.createElement("h2");
-  titleElement.textContent= section.title;
+  titleElement.textContent = section.title;
   sectionElement.appendChild(titleElement);
   
-  if(section.image){
-    const imageElement =document.createElement('img');
+  if (section.image) {
+    const imageElement = document.createElement('img');
     imageElement.src = section.image;
     imageElement.alt = section.title;
-    imageElement.className= "menu-icon";
+    imageElement.className = "menu-icon";
     sectionElement.appendChild(imageElement);
   }
 
+  const menuListElement = document.createElement("div");
+  menuListElement.className = 'menu-list';
 
-const menuListElement = document.createElement("div");
-  menuListElement.className= 'menu-list';
-
-  const saborColumn = document.createElement("div");
-  saborColumn.className = 'sabor-column';
-
-  const precioColumn = document.createElement('div');
-    precioColumn.className = 'precio-column';
-  
   section.items.forEach(item => {
+    const itemElement = document.createElement('div');
+    itemElement.className = 'menu-item';
 
     const saborElement = document.createElement('p');
-    saborElement.className= 'sabor';
+    saborElement.className = 'sabor';
     saborElement.textContent = item.sabor.trim();
-    saborColumn.appendChild(saborElement);
 
     const precioElement = document.createElement('p');
-    precioElement.className= 'precio';
+    precioElement.className = 'precio';
     precioElement.textContent = item.precio.trim();
-    precioColumn.appendChild(precioElement);
+
+    itemElement.appendChild(saborElement);
+    itemElement.appendChild(precioElement);
+    menuListElement.appendChild(itemElement);
   });
 
-  menuListElement.appendChild(saborColumn);
-  menuListElement.appendChild(precioColumn);
   sectionElement.appendChild(menuListElement);
-
   return sectionElement;
 };
 
-const renderMenu = () =>{
-  const menuContainer =document.getElementById("menu-content");
-  if(!menuContainer){
+const renderMenu = () => {
+  const menuContainer = document.getElementById("menu-content");
+  if (!menuContainer) {
     console.error("Menu container not found");
     return;
   }
 
-  //Limpia el contenido existente
   menuData.forEach(section => {
     menuContainer.appendChild(createMenuSection(section));
   });
 };
 
-//Ejecuta la función cuando el DOM este ccompletamente cargado
 document.addEventListener('DOMContentLoaded', renderMenu);

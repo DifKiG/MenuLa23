@@ -39,27 +39,26 @@ h2 {
   margin-top: 0.625rem;
 }
 
-
 .domi {
   font-size: 1.5rem;
   margin: 10px 0;
 }
 
-.whatsapp-link{
-  color: inherit;/*Hereda el color del texto padre*/
-  text-decoration: none; /*Quita el subrayado por defecto*/
+.whatsapp-link {
+  color: inherit;
+  text-decoration: none;
   font-weight: bold;
-  display:inline-block;
+  display: inline-block;
   align-items: center;
   transition: color 0.3s ease;
 }
 
-.whatsapp-link:hover{
+.whatsapp-link:hover {
   text-decoration: none;
   color: #25d366;
 }
 
-.whatsapp-link i{
+.whatsapp-link i {
   margin-right: 5px;
   font-size: 1.2em;
 }
@@ -97,11 +96,11 @@ hr {
   margin-bottom: 2rem;
 }
 
-.menu-icon{
+.menu-icon {
   width: 30rem;
   height: 100px;
   object-fit: contain;
-  object-position:center;
+  object-position: center;
 }
 
 .menu-section h2 {
@@ -110,36 +109,35 @@ hr {
 }
 
 .menu-list {
+  width: 100%;
+}
+
+.menu-item {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  width: 100%;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
 }
 
-.sabor-column {
-  flex-grow: 1 1 70%;
-  padding-right: 0.5rem;
-}
-
-.precio-column {
-  flex: 0 0 30%;
-  text-align: right;
-}
-
-.sabor, .precio {
-  margin: 0 0  0.5rem 0;
-}
-
-.sabor{
+.sabor {
+  flex: 1;
   text-align: left;
-  width: 100%;
+  padding-right: 1rem;
+  margin: 0;
+}
+
+.precio {
+  flex: 0 0 auto;
+  text-align: right;
+  white-space: nowrap;
+  margin: 0;
 }
 
 footer {
   font-size: 1.5rem;
 }
 
-.info-container{
+.info-container {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 0.5rem;
   padding: 1rem;
@@ -148,17 +146,17 @@ footer {
   flex-direction: column;
 }
 
-.ubicacion, .horario{
+.ubicacion, .horario {
   margin: 0.5rem 0;
   text-align: left;
   font-size: 15px;
 }
 
-.horario{
+.horario {
   order: 1;
 }
 
-.ubicacion{
+.ubicacion {
   order: 2;
 }
 
@@ -166,7 +164,7 @@ footer {
   margin-bottom: 0.9375rem;
 }
 
-.copyright{
+.copyright {
   text-align: center;
   font-size: 1rem;
   color: var(--text-color);
@@ -180,43 +178,39 @@ footer {
     font-size: 14px;
   }
 
-  h1{
+  h1 {
     font-size: 1.5rem;
   }
-  h2{
+  h2 {
     font-size: 1.2rem;
   }
-  .domi{
+  .domi {
     font-size: 1.2rem;
   }
 
-  .sabor-column{
-    flex: 1 1 60%;
+  .menu-item {
+    font-size: 0.9rem;
   }
 
-  .precio-column{
-    flex: 0 0 40%; 
-  }
-
-  footer{
+  footer {
     font-size: 1.2rem;
   }
-  .info-container{
+  .info-container {
     padding: 0.5rem;
   }
-  .ubicacion, .horario{
+  .ubicacion, .horario {
     font-size: 0.9rem;
   }
 }
 
 @media (min-width: 48rem) {
-  .info-container{
+  .info-container {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
   }
 
-  .ubicacion, .horario{
+  .ubicacion, .horario {
     width: 48%;
   }
   
