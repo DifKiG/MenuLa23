@@ -1,34 +1,36 @@
 //Es un arreglo de objetos tiene info de menu y sus items
 const menuData = [
   {
-    title: "Arepas y acompañantes",
-    /*image: "img/coleccion-arepas-dibujadas-mano.png",*/
+    title: "¡Conoce y degusta nuestras deliciosas Arepas!",
+    
     items: [
-      { sabor: "Arepa pequeña", precio: "$ 400 pesos" },
-      { sabor: "Arepa sin asar", precio: "$ 1.000 pesos" },
-      { sabor: "Arepa solas", precio: "$1.500 pesos" },
-      { sabor: "Arepa con Queso Lonchis", precio: "$3.500 pesos" },
-      { sabor: "Arepa con Queso Cuajada", precio: "$3.500 pesos" },
-      { sabor: "Arepa con jamón y queso", precio: "$4.000 pesos" },
-      { sabor: "Arepa con chorizo", precio: "$6.000 pesos" },
-      { sabor: "Chorizo solo", precio: "$5.000 pesos" },
-      { sabor: "Arepa con huevos revueltos", precio: "$3.500 pesos" },
-      { sabor: "Arepa con pericos", precio: "$4.500 pesos" },
-      { sabor: "Arepa con chorizo", precio: "$6.000 pesos" },
-      { sabor: "Arepa con carne hamburguesa", precio: "$5.500 pesos" },
-      { sabor: "Arepa con pollo desmechado", precio: "$8.000 pesos" },
-      { sabor: "Arepa con carne desmechada", precio: "$8.000 pesos" },
-      { sabor: "Arepa mixta pollo y carne", precio: "$9.000 pesos" },
-      { sabor: "Arepa con todo", precio: "$12.000 pesos" }
+      { sabor: "Arepa pequeña.", precio: "$ 400 pesos." },
+      { sabor: "Arepa sin asar.", precio: "$ 1.000 pesos." },
+      { sabor: "Arepa solas.", precio: "$1.500 pesos." },
+      { sabor: "Arepa con Queso Lonchis.", precio: "$3.500 pesos." },
+      { sabor: "Arepa con Queso Cuajada.", precio: "$3.500 pesos." },
+      { sabor: "Arepa con jamón y queso.", precio: "$4.000 pesos." },
+      { sabor: "Maduro con queso.", precio: "$4.000 pesos." },
+      { sabor: "Chorizo solo.", precio: "$5.000 pesos." },
+      { sabor: "Mañanas Arepa con huevos revueltos.", precio: "$3.500 pesos." },
+      { sabor: "Mañanas Arepa con pericos.", precio: "$4.500 pesos." },
+      { sabor: "Arepa con chorizo.", precio: "$6.000 pesos." },
+      { sabor: "Arepa con carne hamburguesa.", precio: "$5.500 pesos." },
+      { sabor: "Arepa con pollo desmechado.", precio: "$8.000 pesos." },
+      { sabor: "Arepa con carne desmechada.", precio: "$8.000 pesos." },
+      { sabor: "Arepa mixta pollo y carne.", precio: "$9.000 pesos." },
+      { sabor: "Arepa con todo: carne desmechada, chicharrón, pollo desmechado, madurito y queso.", precio: "$12.000 pesos." },
+      { sabor: "Arepa trifásica.", precio: "$10.000 pesos." },
+      { sabor: "Arepa Madurita con chicharrón, maduro y queso.", precio: "$12.000 pesos." }
     ]
   },
   {
-    title: "Bebidas",
+    title: "Bebidas.",
     /*image: "img/coleccion-diferentes-elementos-cafe-dibujados-mano.png",*/
     items: [
-      { sabor: "Café", precio: "$ 1.000 pesos" },
-      { sabor: "Café en leche", precio: "$ 2.000 pesos" },
-      { sabor: "Vaso de gaseosa", precio: "$ 1.000 pesos" } 
+      { sabor: "Café.", precio: "$ 1.000 pesos." },
+      { sabor: "Café en leche.", precio: "$ 2.000 pesos." },
+      { sabor: "Vaso de gaseosa.", precio: "$ 1.000 pesos." } 
     ]
   }
 ];
